@@ -1,4 +1,4 @@
-BASE16_THEME='twilight'
+BASE16_THEME='tomorrow'
 
 zinit ice atload"base16_${BASE16_THEME}"
 zinit light "chriskempson/base16-shell"
