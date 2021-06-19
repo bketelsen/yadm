@@ -10,7 +10,7 @@ zinit snippet OMZ::plugins/per-directory-history/per-directory-history.zsh
 zinit ice silent wait"0"
 zinit light zdharma/history-search-multi-word
 
-source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 ##
 # Configuration
 ##
