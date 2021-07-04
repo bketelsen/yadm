@@ -3,7 +3,7 @@ cleanup () {
     find ~/src -name '.next' -type d -prune -exec rm -rf '{}' +
     cargo sweep -r -t 30 ~/src
     brew cleanup
-    is_bin_in_path docker && docker system prune || echo "skipping docker"
+    is_bin_in_path docker && docker system prune -a -f --volumes || echo "skipping docker"
 }
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
 function is_bin_in_path {
