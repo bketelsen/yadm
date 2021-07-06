@@ -1,6 +1,6 @@
 update() {
-    is_bin_in_path apt && sudo apt update || echo "skipping apt"
-    is_bin_in_path apt && sudo apt upgrade -y || echo "skipping apt"
+    is_bin_in_path apt-get && sudo apt update || echo "skipping apt"
+    is_bin_in_path apt-get && sudo apt upgrade -y || echo "skipping apt"
     is_bin_in_path brew && brew update || echo "skipping brew"
     is_bin_in_path brew && brew upgrade || echo "skipping brew"
 }
