@@ -6,3 +6,5 @@ fi
 if [[ -a /home/linuxbrew/.linuxbrew/bin ]]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+
+export ZPROFILE_LOADED=1
