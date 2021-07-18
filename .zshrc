@@ -10,6 +10,14 @@ if (( ! ${+ZPROFILE_LOADED} )); then
     echo "loading zprofile"
     source "$HOME/.zprofile"
 fi
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
