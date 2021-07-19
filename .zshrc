@@ -10,6 +10,14 @@ if (( ! ${+ZPROFILE_LOADED} )); then
     echo "loading zprofile"
     source "$HOME/.zprofile"
 fi
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
@@ -41,3 +49,4 @@ eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
 test -e "$HOME/.shellfishrc" && source "$HOME/.shellfishrc"
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
