@@ -1,8 +1,9 @@
 update() {
     is_bin_in_path apt-get && sudo apt update || echo "skipping apt"
-    is_bin_in_path apt-get && sudo apt upgrade -y || echo "skipping apt"
+    is_bin_in_path apt-get && sudo apt upgrade -y 
     is_bin_in_path brew && brew update || echo "skipping brew"
-    is_bin_in_path brew && brew upgrade || echo "skipping brew"
+    is_bin_in_path brew && brew upgrade  
+    is_bin_in_path nix && nix-env -u || echo "skipping nix"
 }
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
 function is_bin_in_path {
