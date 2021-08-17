@@ -1,1 +1,0 @@
-starship.sh##distro.Ubuntu
