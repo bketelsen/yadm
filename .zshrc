@@ -7,7 +7,6 @@ if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 if (( ! ${+ZPROFILE_LOADED} )); then
-    echo "loading zprofile"
     source "$HOME/.zprofile"
 fi
 
@@ -49,4 +48,4 @@ eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
 test -e "$HOME/.shellfishrc" && source "$HOME/.shellfishrc"
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
