@@ -4,6 +4,7 @@ update() {
     is_bin_in_path brew && brew update || echo "skipping brew"
     is_bin_in_path brew && brew upgrade  
     is_bin_in_path nix && nix-env -u || echo "skipping nix"
+    is_bin_in_path flatpak && flatpak update || echo "skipping flatpak"
 }
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
 function is_bin_in_path {
