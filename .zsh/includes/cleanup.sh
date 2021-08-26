@@ -5,7 +5,7 @@ cleanup () {
     brew cleanup
     is_bin_in_path docker && docker system prune -a -f --volumes || echo "skipping docker"
     is_bin_in_path nix && nix-collect-garbage -d || echo "skipping nix"
-    is_bin_in_path apt && sudo apt autoremove || echo "skipping apt autoremove"
+    is_bin_in_path apt-get && sudo apt autoremove || echo "skipping apt autoremove"
 }
 # https://stackoverflow.com/questions/6569478/detect-if-executable-file-is-on-users-path
 function is_bin_in_path {
