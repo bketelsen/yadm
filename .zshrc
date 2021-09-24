@@ -44,8 +44,6 @@ for file in ~/.zsh/includes/*; do
     source "$file"
 done
 
-eval "$(direnv hook zsh)"
-eval "$(starship init zsh)"
 
 test -e "$HOME/.shellfishrc" && source "$HOME/.shellfishrc"
 
