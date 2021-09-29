@@ -3,3 +3,8 @@ ssh_only = false
 format =  "on [$hostname](bold red) "
 trim_at = ".companyname.com"
 disabled = false
+
+[username]
+format = "[$user]($style) "
+disabled = false
+show_always = true
