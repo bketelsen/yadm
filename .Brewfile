@@ -66,7 +66,6 @@ brew "stow"
 brew "syncthing", restart_service: true
 brew "tree"
 brew "typescript"
-brew "vips"
 brew "watchexec"
 brew "wget"
 brew "yadm"
