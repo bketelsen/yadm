@@ -5,3 +5,13 @@
 	email = bketelsen@gmail.com
 [init]
 	defaultBranch = main
+[include]
+	path = /Users/bjk/.gitconfig.local
+[dotfiles]
+	managed = true
+[credential]
+	helper = osxkeychain
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = "code --wait "
