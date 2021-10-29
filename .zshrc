@@ -10,6 +10,7 @@ if (( ! ${+ZPROFILE_LOADED} )); then
     source "$HOME/.zprofile"
 fi
 
+export HOMEBREW_PREFIX=$(brew --prefix)
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
