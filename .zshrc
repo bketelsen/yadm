@@ -28,7 +28,7 @@ zinit light-mode for \
     zdharma-continuum/z-a-rust \
     zdharma-continuum/z-a-as-monitor \
     zdharma-continuum/z-a-patch-dl \
-    zdharma-oontinuum/z-a-bin-gem-node
+    zdharma-continuum/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
 
